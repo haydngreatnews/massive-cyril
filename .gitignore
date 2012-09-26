@@ -1,5 +1,6 @@
 *.class
-
+bin/
+SWEN303Project/bin/
 # Package Files #
 *.jar
 *.war
