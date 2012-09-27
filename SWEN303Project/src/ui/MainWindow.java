@@ -1,5 +1,14 @@
 package ui;
 
-public class MainWindow {
+import java.awt.Canvas;
 
+import javax.swing.JFrame;
+
+public class MainWindow extends JFrame{
+	Canvas scatter;
+	Canvas timeline;
+	
+	public MainWindow(){
+		
+	}
 }
