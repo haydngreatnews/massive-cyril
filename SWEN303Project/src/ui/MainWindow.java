@@ -1,6 +1,7 @@
 package ui;
 
 
+import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,22 +14,23 @@ import javax.swing.JPanel;
 
 import backend.Country;
 import backend.Region;
-
+import canvas.CountryPoint;
 import canvas.ScatterCanvas;
-import canvas.StatPoint;
 
 public class MainWindow extends JFrame{
 	ScatterCanvas scatter;
 	JPanel timeline;
 	//A map for matching a country code to a 
 	HashMap<String, Country> countries = new HashMap<String,Country>();
+	public static JLabel status = new JLabel("Waiting...");
 	
 	public MainWindow(String s){
 		super(s);		
 		scatter = new ScatterCanvas();
-		setLayout(new FlowLayout());
-		add(scatter);
-		add(new JLabel("StatYou?"));
+		setLayout(new BorderLayout());
+		add(scatter, BorderLayout.WEST);
+		add(new JLabel("StatYou?"), BorderLayout.EAST);
+		add(status, BorderLayout.SOUTH);
 		pack();
 		setVisible(true);
 		readCountries();
@@ -47,7 +49,7 @@ public class MainWindow extends JFrame{
 			scatter.setLabels(header[0],header[1]);
 			while (sc.hasNext()){
 				String[] l = sc.nextLine().split(":");
-				scatter.addPoint(new StatPoint(Double.valueOf(l[1]), Double.valueOf(l[2]), l[0]));
+				scatter.addPoint(new CountryPoint(Double.valueOf(l[1]), Double.valueOf(l[2]), countries.get(l[0])));
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
