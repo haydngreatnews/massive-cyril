@@ -12,4 +12,7 @@ public class CountryPoint extends StatPoint {
 	public Country getCountry(){
 		return country;
 	}
+	public String getName(){
+		return country.getName();
+	}
 }

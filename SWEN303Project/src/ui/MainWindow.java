@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -21,7 +22,7 @@ public class MainWindow extends JFrame{
 	ScatterCanvas scatter;
 	JPanel timeline;
 	//A map for matching a country code to a 
-	HashMap<String, Country> countries = new HashMap<String,Country>();
+	public static HashMap<String, Country> countries = new HashMap<String,Country>();
 	public static JLabel status = new JLabel("Waiting...");
 	
 	public MainWindow(String s){
@@ -29,6 +30,7 @@ public class MainWindow extends JFrame{
 		scatter = new ScatterCanvas();
 		setLayout(new BorderLayout());
 		add(scatter, BorderLayout.WEST);
+		scatter.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 		add(new JLabel("StatYou?"), BorderLayout.EAST);
 		add(status, BorderLayout.SOUTH);
 		pack();

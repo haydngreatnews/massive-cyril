@@ -94,6 +94,10 @@ public class StatPoint extends Point implements Drawable {
 		}
 		return hovered;
 	}
+	
+	public String getName(){
+		return label;
+	}
 
 	public Vector getDest() {
 		return dest;

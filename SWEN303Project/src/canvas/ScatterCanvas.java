@@ -13,7 +13,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.swing.BorderFactory;
 import javax.swing.JPanel;
+
+import ui.MainWindow;
 
 public class ScatterCanvas extends JPanel {
 	// The point list
@@ -136,6 +139,7 @@ public class ScatterCanvas extends JPanel {
 				if (Math.abs(d.height - y) < 5 && Math.abs(d.width - x) < 5) {
 					pointsByLocation.get(d).setHovered(true);
 					over.add(pointsByLocation.get(d));
+					MainWindow.status.setText(pointsByLocation.get(d).getName());
 				}
 			}
 			for (StatPoint s:oldOver){
