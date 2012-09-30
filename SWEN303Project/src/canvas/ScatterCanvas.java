@@ -47,6 +47,21 @@ public class ScatterCanvas extends JPanel {
 		redraw = new RedrawThread();
 		redraw.start();
 	}
+	
+	public void reset(){
+		points.clear();
+		pointsByCountry.clear();
+		pointsByLocation.clear();
+		drawables.clear();
+		xMaxV = -Double.MAX_VALUE;
+		yMaxV = -Double.MAX_VALUE;
+		xMinV = 0;
+		yMinV = 0;
+		xLabel = "";
+		yLabel = "";
+		scaleFactor = null;
+		offset = null;
+	}
 
 	public void addPoint(CountryPoint p) {
 		points.add(p);
