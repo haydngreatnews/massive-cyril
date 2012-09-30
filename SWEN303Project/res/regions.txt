@@ -1,0 +1,21 @@
+Region:Eastern Africa
+Region:Middle Africa
+Region:Northern Africa
+Region:Southern Africa
+Region:Western Africa
+Region:Latin America and the Caribbean
+Region:Caribbean
+Region:Central America
+Region:South America
+Region:Central Asia
+Region:Eastern Asia     
+Region:Southern Asia
+Region:Western Asia
+Region:Eastern Europe
+Region:Northern Europe
+Region:Southern Europe
+Region:Western Europe
+Region:Australia and New Zealand
+Region:Melanesia
+Region:Micronesia
+Region:Polynesia

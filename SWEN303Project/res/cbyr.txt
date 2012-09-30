@@ -1,0 +1,232 @@
+Region:Eastern Africa
+Country:Burundi
+Country:Comoros
+Country:Djibouti
+Country:Eritrea
+Country:Ethiopia
+Country:Kenya
+Country:Madagascar
+Country:Malawi
+Country:Mauritius
+Country:Mozambique
+Country:Rwanda
+Country:Seychelles
+Country:Somalia
+Country:Uganda
+Country:United Republic of Tanzania
+Country:Zambia
+Country:Zimbabwe
+Region:Middle Africa
+Country:Angola
+Country:Cameroon
+Country:Central African Republic
+Country:Chad
+Country:Congo
+Country:Democratic Republic of the Congo
+Country:Equatorial Guinea
+Country:Gabon
+Country:Sao Tome and Principe
+Region:Northern Africa
+Country:Algeria
+Country:Egypt
+Country:Libya
+Country:Morocco
+Country:South Sudan
+Country:Sudan
+Country:Tunisia
+Country:Western Sahara
+Region:Southern Africa
+Country:Botswana
+Country:Lesotho
+Country:Namibia
+Country:South Africa
+Country:Swaziland
+Region:Western Africa
+Country:Benin
+Country:Burkina Faso
+Country:Cape Verde
+Country:Gambia
+Country:Ghana
+Country:Guinea
+Country:Liberia
+Country:Mali
+Country:Mauritania
+Country:Niger
+Country:Nigeria
+Country:Saint Helena
+Country:Senegal
+Country:Sierra Leone
+Country:Togo
+Region:Latin America and the Caribbean
+Region:Caribbean
+Country:Anguilla
+Country:Antigua and Barbuda
+Country:Aruba
+Country:Bahamas
+Country:Barbados
+Country:British Virgin Islands
+Country:Cayman Islands
+Country:Cuba
+Country:Dominica
+Country:Dominican Republic
+Country:Grenada
+Country:Guadeloupe
+Country:Haiti
+Country:Jamaica
+Country:Martinique
+Country:Montserrat
+Country:Puerto Rico
+Country:Saint Kitts and Nevis
+Country:Saint Lucia
+Country:Saint Vincent and the Grenadines
+Country:Trinidad and Tobago
+Country:Turks and Caicos Islands
+Country:United States Virgin Islands
+Region:Central America
+Country:Belize
+Country:Costa Rica
+Country:El Salvador
+Country:Guatemala
+Country:Honduras
+Country:Mexico
+Country:Nicaragua
+Country:Panama
+Region:South America
+Country:Argentina
+Country:Brazil
+Country:Chile
+Country:Colombia
+Country:Ecuador
+Country:French Guiana
+Country:Guyana
+Country:Paraguay
+Country:Peru
+Country:Suriname
+Country:Uruguay
+Country:Bermuda
+Country:Canada
+Country:Greenland
+Country:Saint Pierre and Miquelon
+Country:United States of America
+Region:Central Asia
+Region:Eastern Asia
+Country:China
+Country:Japan
+Country:Mongolia
+Country:Republic of Korea
+Region:Southern Asia
+Country:Afghanistan
+Country:Bangladesh
+Country:Bhutan
+Country:India
+Country:Maldives
+Country:Nepal
+Country:Pakistan
+Country:Sri Lanka
+Country:Brunei Darussalam
+Country:Cambodia
+Country:Indonesia
+Country:Malaysia
+Country:Myanmar
+Country:Philippines
+Country:Singapore
+Country:Thailand
+Country:Viet Nam
+Region:Western Asia
+Country:Armenia
+Country:Azerbaijan
+Country:Bahrain
+Country:Cyprus
+Country:Georgia
+Country:Iraq
+Country:Israel
+Country:Jordan
+Country:Kuwait
+Country:Lebanon
+Country:Occupied Palestinian Territory
+Country:Oman
+Country:Qatar
+Country:Saudi Arabia
+Country:Syrian Arab Republic
+Country:Turkey
+Country:United Arab Emirates
+Country:Yemen
+Region:Eastern Europe
+Country:Belarus
+Country:Bulgaria
+Country:Czech Republic
+Country:Hungary
+Country:Poland
+Country:Romania
+Country:Russian Federation
+Country:Slovakia
+Country:Ukraine
+Region:Northern Europe
+Country:Denmark
+Country:Estonia
+Country:Faeroe Islands
+Country:Finland
+Country:Iceland
+Country:Ireland
+Country:Isle of Man
+Country:Latvia
+Country:Lithuania
+Country:Norway
+Country:Sark
+Country:Svalbard and Jan Mayen Islands
+Country:Sweden
+Country:United Kingdom of Great Britain and Northern Ireland
+Region:Southern Europe
+Country:Albania
+Country:Andorra
+Country:Bosnia and Herzegovina
+Country:Croatia
+Country:Gibraltar
+Country:Greece
+Country:Holy See
+Country:Italy
+Country:Malta
+Country:Montenegro
+Country:Portugal
+Country:San Marino
+Country:Slovenia
+Country:Spain
+Country:The former Yugoslav Republic of Macedonia
+Region:Western Europe
+Country:Austria
+Country:Belgium
+Country:France
+Country:Germany
+Country:Liechtenstein
+Country:Luxembourg
+Country:Monaco
+Country:Netherlands
+Country:Switzerland
+Region:Australia and New Zealand
+Country:Australia
+Country:New Zealand
+Country:Norfolk Island
+Region:Melanesia
+Country:Fiji
+Country:New Caledonia
+Country:Papua New Guinea
+Country:Solomon Islands
+Country:Vanuatu
+Region:Micronesia
+Country:Guam
+Country:Kiribati
+Country:Marshall Islands
+Country:Nauru
+Country:Northern Mariana Islands
+Country:Palau
+Region:Polynesia
+Country:American Samoa
+Country:Cook Islands
+Country:French Polynesia
+Country:Niue
+Country:Pitcairn
+Country:Samoa
+Country:Tokelau
+Country:Tonga
+Country:Tuvalu
+Country:Wallis and Futuna Islands

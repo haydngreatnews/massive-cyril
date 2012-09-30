@@ -22,6 +22,7 @@ public class ScatterCanvas extends JPanel {
 	Dimension size = new Dimension(800, 600);
 
 	public ScatterCanvas() {
+		super();
 		setPreferredSize(size);
 		setMaximumSize(size);
 		setMinimumSize(size);
