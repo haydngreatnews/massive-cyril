@@ -45,6 +45,14 @@ public class StatPoint extends Point implements Drawable {
 		dest = null;
 		label = null;
 	}
+	
+	public StatPoint(double xVal, double yVal, String label) {
+		super(0, 0);
+		xV = xVal;
+		yV = yVal;
+		dest = null;
+		this.label = label;
+	}
 
 	public void calculate(Dimension scaleFactor, Dimension offset) {
 		setX((int) (Math.round(xV * scaleFactor.getWidth()) + offset.getWidth()));

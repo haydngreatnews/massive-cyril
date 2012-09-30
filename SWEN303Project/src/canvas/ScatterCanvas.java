@@ -2,6 +2,9 @@ package canvas;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.geom.AffineTransform;
+import java.awt.image.AffineTransformOp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +21,7 @@ public class ScatterCanvas extends JPanel {
 	double yMinV = 0;
 	Dimension scaleFactor;
 	Dimension offset;
+	String xLabel, yLabel;
 
 	Dimension size = new Dimension(800, 600);
 
@@ -27,16 +31,29 @@ public class ScatterCanvas extends JPanel {
 		setMaximumSize(size);
 		setMinimumSize(size);
 	}
+	
+	public void addPoint(StatPoint p){
+		points.add(p);
+	}
+	
+	public void setLabels(String xLabel, String yLabel){
+		this.xLabel = xLabel;
+		this.yLabel = yLabel;
+	}
 
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		// Paint the axes
+		Graphics2D g2d = (Graphics2D) g;
+		g2d.scale(1, -1);
+		g2d.translate(0,-getHeight());
 		calculateAxes();
 		if (xMaxV == xMinV || yMaxV == yMinV) {
 			return;
 		}
-
+		g.drawLine(offset.width, offset.height, offset.width, offset.height+this.getHeight());
+		g.drawLine(offset.width, offset.height, offset.width+this.getWidth(), offset.height);
 		for (StatPoint p : points) {
 			p.calculate(scaleFactor, offset);
 			p.drawSelf(g);
@@ -47,7 +64,6 @@ public class ScatterCanvas extends JPanel {
 	}
 
 	public Dimension valueToCoord(Dimension val) {
-
 		return new Dimension(val);
 	}
 
@@ -61,11 +77,11 @@ public class ScatterCanvas extends JPanel {
 			yMinV = (y < yMinV) ? y : yMinV;
 		}
 
-		scaleFactor = new Dimension((int) Math.round(getSize().getWidth()
-				/ (xMaxV - xMinV)), (int) Math.round(getSize().getHeight()
+		scaleFactor = new Dimension((int) Math.round((getSize().getWidth()-10)
+				/ (xMaxV - xMinV)), (int) Math.round((getSize().getHeight()-10)
 				/ (yMaxV - yMinV)));
-		offset = new Dimension((int) (scaleFactor.getWidth() * xMinV),
-				(int) (scaleFactor.getHeight() * yMinV));
+		offset = new Dimension((int) (scaleFactor.getWidth() * xMinV) +10,
+				(int) (scaleFactor.getHeight() * yMinV)+10);
 	}
 
 }
