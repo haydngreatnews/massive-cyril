@@ -33,6 +33,7 @@ public class MainWindow extends JFrame{
 		setVisible(true);
 		readCountries();
 		readFile(new File("res/woman.txt"));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 	public void setScatter(ScatterCanvas s){
@@ -42,16 +43,17 @@ public class MainWindow extends JFrame{
 	private void readFile(File f){
 		try {
 			Scanner sc = new Scanner(f);
-			String fLine = sc.nextLine();
-			
+			String[] header = sc.nextLine().split(",");
+			scatter.setLabels(header[0],header[1]);
 			while (sc.hasNext()){
 				String[] l = sc.nextLine().split(":");
-				scatter.addPoint(new StatPoint(Double.valueOf(l[0]), Double.valueOf(l[1]), l[2]));
+				scatter.addPoint(new StatPoint(Double.valueOf(l[1]), Double.valueOf(l[2]), l[0]));
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		scatter.repaint();
 		
 	}
 		
