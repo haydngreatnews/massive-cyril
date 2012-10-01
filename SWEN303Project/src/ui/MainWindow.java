@@ -1,7 +1,6 @@
 package ui;
 
 
-import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -32,7 +31,7 @@ public class MainWindow extends JFrame{
 	JTextField fileBox;
 	//A map for matching a country code to a 
 	public static HashMap<String, Country> countries = new HashMap<String,Country>();
-	public static JLabel status = new JLabel("Waiting...");
+	public static JLabel status = new JLabel("...");
 	
 	public MainWindow(String s){
 		super(s);		
