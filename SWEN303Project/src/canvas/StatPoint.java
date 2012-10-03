@@ -29,7 +29,13 @@ public class StatPoint extends Point implements Drawable {
 		enabled = true;
 
 	}
+	public StatPoint(int x, int y, String label) {
+		super(x, y);
+		dest = null;
+		this.label = label;
+		enabled = true;
 
+	}
 	public StatPoint(StatPoint old) {
 		super(old.x, old.y);
 		dest = old.dest;
@@ -106,6 +112,12 @@ public class StatPoint extends Point implements Drawable {
 	public void setDest(Vector dest) {
 		this.dest = dest;
 	}
+	
+	public void moveToward(int divFactor){
+		if (dest == null) return;
+		x += dest.divBy(divFactor).getWidth();
+		y += dest.divBy(divFactor).getHeight();
+	}
 
 	public double getXVal() {
 		return xV;
@@ -131,9 +143,18 @@ public class StatPoint extends Point implements Drawable {
 		hovered = b;
 		highlightColor = Color.red;
 		strokeSize = 3;
-		if (false){
+		if (b==false){
 			startFade();
 		}
+	}
+	
+	public boolean atEnd(){
+		if (dest == null) return true;
+		if (dest.getEnd().x == this.x && dest.getEnd().y == this.y){
+			dest = null;
+			return true;
+		}
+		return false;
 	}
 	
 	public void startFade(){

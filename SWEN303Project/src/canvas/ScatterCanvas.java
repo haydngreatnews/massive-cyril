@@ -48,6 +48,23 @@ public class ScatterCanvas extends JPanel {
 		redraw.start();
 	}
 	
+	public ScatterCanvas(Dimension sz){
+		super();
+		size = sz;
+		setPreferredSize(size);
+		// setMaximumSize(size);
+		setMinimumSize(size);
+		setBackground(Color.gray);
+		addMouseMotionListener(new CanvasMouseListener());
+		requestFocusInWindow();
+		redraw = new RedrawThread();
+		redraw.start();
+	}
+
+	public List<StatPoint> getPoints(){
+		return points;
+	}
+	
 	public void reset(){
 		points.clear();
 		pointsByCountry.clear();
@@ -71,7 +88,18 @@ public class ScatterCanvas extends JPanel {
 	public void addPoint(StatPoint p) {
 		points.add(p);
 	}
+	public void removePoint(StatPoint p) {
+		points.remove(p);
+		if (p instanceof CountryPoint){
+			pointsByCountry.remove(((CountryPoint)p).getCountry().getCode());
+		}
+	}
 
+	public void removePoints(List<StatPoint> l) {
+		for (StatPoint p:l){
+			removePoint(p);
+		}
+	}
 	public void setLabels(String xLabel, String yLabel) {
 		this.xLabel = xLabel;
 		this.yLabel = yLabel;
