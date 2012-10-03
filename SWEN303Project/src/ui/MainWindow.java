@@ -182,7 +182,9 @@ public class MainWindow extends JFrame {
 				controlPanel.add(makePres, "gaptop 300, span 2, grow");
 				controlPanel.add(showPres, "span 2, grow");
 				controlPanel.add(quit, "span 2, grow");
+				remove(presPanel);
 				add(controlPanel, "east, pos plot.x2 plot.y null plot.y2");
+				revalidate();
 				break;
 
 			}
@@ -206,7 +208,6 @@ public class MainWindow extends JFrame {
 				} else {
 					c = countries.get(p.getName());
 				}
-				System.out.println(c);
 				if (c == null)
 					continue;
 				regionPoints.get(c.getRegion()).add(p);
@@ -243,6 +244,7 @@ public class MainWindow extends JFrame {
 			presPanel.add(open);
 			presPanel.add(regNatButton, "span 2, grow");
 			JButton ret = new JButton("Return");
+			ret.addActionListener(new ButtonListener());
 			presPanel.add(ret, "gaptop 300, span 2, grow");
 			presPanel.add(showPres, "span 2, grow");
 			add(presPanel, "east, pos plot.x2 plot.y null plot.y2");
